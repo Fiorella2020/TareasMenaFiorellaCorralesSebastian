@@ -1,4 +1,3 @@
-import pytest
 def filtrar_vocales(cadena, bandera):
     # a) cadena debe ser string
     if not isinstance(cadena, str):
@@ -28,6 +27,7 @@ def filtrar_vocales(cadena, bandera):
         filtrado = "".join(c for c in cadena if c not in vocales)
 
     return 0, filtrado
+
 
 def encontrar_extremos(lista):
     # a) Debe ser una lista
