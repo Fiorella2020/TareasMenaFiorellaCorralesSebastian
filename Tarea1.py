@@ -30,3 +30,24 @@ def filtrar_vocales(cadena, bandera):
 
     # h + i) código de éxito + string filtrado
     return 0, filtrado
+
+def encontrar_extremos(lista):
+    # a) Debe ser una lista
+    if not isinstance(lista, list):
+        return -600, None, None
+
+    # c) No debe estar vacía
+    if len(lista) == 0:
+        return -800, None, None
+
+    # d) No debe tener más de 15 elementos
+    if len(lista) > 15:
+        return -900, None, None
+
+    # b) Todos deben ser números (int o float), pero NO bool
+    for x in lista:
+        if type(x) is bool or not isinstance(x, (int, float)):
+            return -700, None, None
+
+    # e) Retornar mínimo y máximo con código de éxito
+    return 0, min(lista), max(lista)
