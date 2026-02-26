@@ -1,3 +1,2 @@
-import os
-x=1
-print( "hola")
+x = 1
+print("hola")
